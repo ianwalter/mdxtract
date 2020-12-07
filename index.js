@@ -1,4 +1,4 @@
-const {parse} = require('@babel/parser')
+const { parse } = require('@babel/parser')
 const generate = require('@babel/generator').default
 const traverse = require('@babel/traverse').default
 const mdx = require('@mdx-js/mdx')
@@ -24,6 +24,7 @@ module.exports = async function mdxtract (content) {
                 {
                   VariableDeclarator (path) {
                     const { code } = generate(path.node.init)
+                    // eslint-disable-next-line no-eval
                     data[path.node.id.name] = eval(`module.exports = ${code}`)
                   }
                 }
