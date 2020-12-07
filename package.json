@@ -1,6 +1,6 @@
 {
   "name": "@ianwalter/mdxtract",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Extract data from mdx files",
   "main": "index.js",
   "scripts": {
