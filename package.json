@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "bff"
+    "test": "bff",
+    "example": "node example"
   },
   "files": [
     "index.js"

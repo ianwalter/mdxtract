@@ -33,8 +33,11 @@ module.exports = async function mdxtract (content) {
           )
 
           // Add the first H1 as the title.
-          const firstHeading = c => c.type === 'heading' && c.depth === 1
-          data.title = tree.children.find(firstHeading)?.children[0]?.value
+          const byIsFirstHeading = c => c.type === 'heading' && c.depth === 1
+          const firstHeading = tree.children.find(byIsFirstHeading)
+          if (firstHeading && firstHeading && firstHeading.children.length) {
+            data.title = firstHeading.children[0].value
+          }
         }
       ]
     }
