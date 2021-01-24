@@ -8,7 +8,7 @@ devDependencies:
   '@changesets/cli': 2.12.0
   '@ianwalter/bff': 9.12.3
   '@ianwalter/eslint-config': 6.2.0
-  '@ianwalter/renovate-config': 1.4.2
+  '@ianwalter/renovate-config': 1.4.3
 lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.10.4:
@@ -618,10 +618,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-YkkUv/Bnwzu0qNqj3BCo1ZP19wk2kkYXYhFvgKGZqVpELRHEwOzo5pD4KszwhjvMUNiBOLYqOZO8C3OCx5+cXA==
-  /@ianwalter/renovate-config/1.4.2:
+  /@ianwalter/renovate-config/1.4.3:
     dev: true
     resolution:
-      integrity: sha512-zsqqCE28FwCvBbXmDQgCwnGa5R1HEiNaMZD4QUwdVuycMT1xtv1TDAj4YiP878M4jgiU83iY1BdUXtjkpxu/Tw==
+      integrity: sha512-61InLaz89GLb3iTcRSL2Z+WtYnEIfzWJ7gy+R8ascdsRpARU8qwkBqmq6euw8OPxfHNbqtqEAiG1ljckFjVwsQ==
   /@ianwalter/sleep/0.0.1:
     dev: true
     resolution:
@@ -4159,7 +4159,7 @@ packages:
     resolution:
       integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==
   /resolve-url/0.2.1:
-    deprecated: 'https://github.com/lydell/resolve-url#deprecated'
+    deprecated: https://github.com/lydell/resolve-url#deprecated
     dev: true
     resolution:
       integrity: sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
@@ -4827,7 +4827,7 @@ packages:
     resolution:
       integrity: sha512-B0yRTzYdUCCn9n+F4+Gh4yIDtMQcaJsmYBDsTSG8g/OejKBodLQ2IHfN3bM7jUsRXndopT7OIXWdYqc1fjmV6g==
   /urix/0.1.0:
-    deprecated: 'Please see https://github.com/lydell/urix#deprecated'
+    deprecated: Please see https://github.com/lydell/urix#deprecated
     dev: true
     resolution:
       integrity: sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
@@ -5023,6 +5023,6 @@ specifiers:
   '@changesets/cli': ^2.12.0
   '@ianwalter/bff': ^9.12.3
   '@ianwalter/eslint-config': ^6.2.0
-  '@ianwalter/renovate-config': ^1.4.2
+  '@ianwalter/renovate-config': ^1.4.3
   '@mdx-js/mdx': ^1.6.22
   unist-util-visit: ^2.0.3
