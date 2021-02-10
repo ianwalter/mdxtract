@@ -6,11 +6,15 @@ dependencies:
   unist-util-visit: 2.0.3
 devDependencies:
   '@changesets/cli': 2.14.1
-  '@ianwalter/bff': 9.12.3
+  '@ianwalter/bff': 10.0.5
   '@ianwalter/eslint-config': 6.2.0
   '@ianwalter/renovate-config': 1.4.3
 lockfileVersion: 5.2
 packages:
+  /@assemblyscript/loader/0.10.1:
+    dev: true
+    resolution:
+      integrity: sha512-H71nDOOL8Y7kWRLqf6Sums+01Q5msqBW2KhDUTemh1tvY04eSkSXrK0uj/4mmY0Xr16/3zyZmsrxN7CKuRbNRg==
   /@babel/code-frame/7.10.4:
     dependencies:
       '@babel/highlight': 7.10.4
@@ -420,11 +424,11 @@ packages:
       node: ^10.12.0 || >=12.0.0
     resolution:
       integrity: sha512-EfB5OHNYp1F4px/LI/FEnGylop7nOqkQ1LRzCM0KccA2U8tvV8w01KBv37LbO7nW4H+YhKyo2LcJhRwjjV17QQ==
-  /@generates/cli/0.0.6:
+  /@generates/cli/0.0.10:
     dependencies:
-      '@generates/logger': 0.0.6
-      '@ianwalter/dot': 1.0.5
-      '@ianwalter/merge': 9.0.1
+      '@generates/dotter': 2.0.0
+      '@generates/logger': 0.1.0
+      '@generates/merger': 0.1.3
       camelcase: 6.2.0
       common-tags: 1.8.0
       decamelize: 4.0.0
@@ -432,28 +436,19 @@ packages:
       read-pkg-up: 7.0.1
     dev: true
     resolution:
-      integrity: sha512-ssLGSmHxqa1eXi0CRUbQc6enpYv5JqSUod+Fr2zE/zU7ZPvf6UKYA++Ea5XLeKeqMPftZT4DZsLCPpERCLbPuQ==
-  /@generates/cli/0.0.7:
-    dependencies:
-      '@generates/logger': 0.0.7
-      '@generates/merger': 0.0.1
-      '@ianwalter/dot': 1.0.5
-      camelcase: 6.2.0
-      common-tags: 1.8.0
-      decamelize: 4.0.0
-      getopts: 2.2.5
-      read-pkg-up: 7.0.1
+      integrity: sha512-MO0UPi6uMT96VckR5s65cpnvQRGMT/52qOGest4Ot0ry+In2H2+ox2RQRiNWK8lSPHUf5n327qRlLrsbz1GllQ==
+  /@generates/dotter/2.0.0:
     dev: true
     resolution:
-      integrity: sha512-tL4jZ6n+x+/17gzj9zIgK3WHhQBkwRAMKx8zF5HOohYASaJ0TizjWp+KLd5Ep29NoNQzEFWrbZqcW8OAX6FQHw==
-  /@generates/logger/0.0.6:
+      integrity: sha512-QI5gmvS1ZOeZ8msYdctT7VARrHWGGG3PuFYGVqhzkeBkalnaqCAtqOxaGFiEab5f7VzEOZt6d41pmM3fbQmaIQ==
+  /@generates/logger/0.1.0:
     dependencies:
-      '@generates/cli': 0.0.6
+      '@generates/cli': 0.0.10
+      '@generates/dotter': 2.0.0
+      '@generates/merger': 0.1.3
       '@ianwalter/chromafi': 1.0.1
       '@ianwalter/clone': 6.0.1
       '@ianwalter/cloneable': 2.0.0
-      '@ianwalter/dot': 1.0.5
-      '@ianwalter/merge': 9.0.1
       chalk: 4.1.0
       has-ansi: 4.0.0
       has-emoji: 1.1.0
@@ -463,50 +458,15 @@ packages:
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-muP0P5gRkx9YKje3ZLsA46pHoguR7UfJb5/YcfL0Y6lqlltPpJcg8nBbzZy5KNJ7x6kGITMRaxs79dpYk7Bh2g==
-  /@generates/logger/0.0.7:
-    dependencies:
-      '@generates/cli': 0.0.6
-      '@generates/merger': 0.0.1
-      '@ianwalter/chromafi': 1.0.1
-      '@ianwalter/clone': 6.0.1
-      '@ianwalter/cloneable': 2.0.0
-      '@ianwalter/dot': 1.0.5
-      chalk: 4.1.0
-      has-ansi: 4.0.0
-      has-emoji: 1.1.0
-      marked: 1.2.5
-      marked-terminal: 4.1.0_marked@1.2.5
-      strip-ansi: 6.0.0
-    dev: true
-    hasBin: true
-    resolution:
-      integrity: sha512-uUOtIQx3AL4J3j2I9dgIj/pDJutYv5edIrC8mZ6/1cWWbP7vOVb+0m5E+9maGu0qHttgfbwtYLakmhb+5PaEGA==
-  /@generates/logger/0.0.8:
-    dependencies:
-      '@generates/cli': 0.0.7
-      '@generates/merger': 0.0.1
-      '@ianwalter/chromafi': 1.0.1
-      '@ianwalter/clone': 6.0.1
-      '@ianwalter/cloneable': 2.0.0
-      '@ianwalter/dot': 1.0.5
-      chalk: 4.1.0
-      has-ansi: 4.0.0
-      has-emoji: 1.1.0
-      marked: 1.2.5
-      marked-terminal: 4.1.0_marked@1.2.5
-      strip-ansi: 6.0.0
-    dev: true
-    hasBin: true
-    resolution:
-      integrity: sha512-ppgd01vaoFmlhogGMpNnR9FkMKp8F2J61qn89zbfylHOh0lecsRTyt8hGt4fyzX6H14AsRC2oHRse4HJp+Aw8Q==
-  /@generates/merger/0.0.1:
+      integrity: sha512-ltA/KJgMRt5qf7gBT+Z8V0Dzuc83mdyQJwjhn3eWxeG6SMNF8Fqrx8yzvQ13AmHWy7wF7/m7CLz8oNsND/M8Mw==
+  /@generates/merger/0.1.3:
     dev: true
     resolution:
-      integrity: sha512-A0zgTrlKJcroOOxx7GOY+OmVvGYVusG0UlhJLC/q8OvpQzF5xHE/jwW7mfPt5anJwHaRgWcWwjfQAFtk3HtYRA==
-  /@ianwalter/bff/9.12.3:
+      integrity: sha512-x4KKHexiP4hIfoGZumc3RSac1t9d/aGErxbG9NASHcx59mljW2uyKDt4qP3igi9hszIHV5mjb4TbAYUNFoWg3w==
+  /@ianwalter/bff/10.0.5:
     dependencies:
-      '@generates/logger': 0.0.8
+      '@generates/logger': 0.1.0
+      '@generates/merger': 0.1.3
       '@ianwalter/cli': 4.1.0
       '@ianwalter/clone': 6.0.1
       '@ianwalter/cloneable': 2.0.0
@@ -515,18 +475,19 @@ packages:
       '@ianwalter/timer': 2.0.2
       array-shuffle: 2.0.0
       callsites: 3.1.0
-      camaro: 6.0.4
+      camaro: 6.1.0
       common-tags: 1.8.0
+      esm-to-cjs: 1.2.0
       expect: 26.6.2
-      globby: 11.0.1
+      glob: 7.1.6
       jest-snapshot: 26.6.2
       junit-report-builder: 2.1.0
       p-series: 2.1.0
-      workerpool: 6.0.3
+      workerpool: 6.1.0
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-e2oAW25bJdHR24bOcaFF9L43UYRFbPaeGz1gyp4Pj06p8ShEq4hHuWr8+jQXC/+YsZ8aoprxDH9jU6pX/zkFHQ==
+      integrity: sha512-B2aXtYVxAwd6ZxiMxx2+pbkaExaEptg8wIxeSBynYm8GxIbKuyU4KLctZnSL5aZFt2EpZ7EI8eLmM/wNGXkVCg==
   /@ianwalter/chromafi/1.0.1:
     dependencies:
       ansi-mark: 1.0.4
@@ -571,10 +532,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ZMKux34x/+EJIc6RCu01MmFXbW1rDSCCHvL9Bu81Hy/QGwvYu/lJACXWEbiCC/q7kDfVhA8LWNcLeMsp7G5a/A==
-  /@ianwalter/dot/1.0.5:
-    dev: true
-    resolution:
-      integrity: sha512-xOtXmoeKrLudrNF5noqJPXJkMtm33A/Hhy/UPV0z5pWCtPa8pN1b5NFgrsFZsA/UsUN47MKWjLazPuZIO77ljw==
   /@ianwalter/eslint-config/6.2.0:
     dependencies:
       eslint: 7.17.0
@@ -599,10 +556,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Ohskh/vqQFgW2Abaxd3kPYz/uNqoUmCSjU8kB8SoRieQqIOyXit1pFKYW4HmcoRcDFbktpWmS1QpIBoF74DGBg==
-  /@ianwalter/merge/9.0.1:
-    dev: true
-    resolution:
-      integrity: sha512-Wu7eAZEsfuW0FJsVsdsNaWAtlY/6Viy74HQpZ8A81KutjhNO5cyPRkiBGletuX9kDUTOdSwWJokPnu/o4yE3KA==
   /@ianwalter/print/5.3.0:
     dependencies:
       '@ianwalter/chromafi': 1.0.1
@@ -1167,14 +1120,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
-  /camaro/6.0.4:
+  /camaro/6.1.0:
     dependencies:
-      piscina: 1.6.3
+      piscina: 2.1.0
     dev: true
     engines:
       node: '>= 12.0.0'
     resolution:
-      integrity: sha512-A8kkwqbg5nw0KErrr3yDuLD2+C7WIP7a1TfklRdYbmb6ss5rxlvzyLXKbBNtC3EJaOXYPEFr4SXYp74jcfULIw==
+      integrity: sha512-Aa9q2fxR+9i90Z8BOH3JBt2TCa+JZbhaqj0Mmx4zsTUe8G1UyA4djLXjQimcp2+WByZWTYVEK7TPPzmdi7MObw==
   /camelcase-css/2.0.1:
     dev: false
     engines:
@@ -1946,6 +1899,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-zJk08MiBgwuGoxes5sSQhOtibZ75pz0J35XTRlZOk9xMffhpA9BTbQZxoXZzOl5zMbleShbGwtw+1kGferfFwQ==
+  /esm-to-cjs/1.2.0:
+    dev: true
+    resolution:
+      integrity: sha512-pVKBUyde11DZ9fezHtcvX2Ha1hh48GaoVvTxsDkgukPFQ9fvJL/x1RIINU5qkpdW4evN338Wg97qItq8qedsKw==
   /espree/7.3.1:
     dependencies:
       acorn: 7.4.1
@@ -2519,19 +2476,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-nDM6bvd7lIqDUiYEiu5Sl/+6ReP0BMk/2f4U/Rooccxkj0P5nm+acM5PrGJ/t5I8qPGiqZSE6hVAwZEdZIvP4w==
-  /hdr-histogram-js/1.2.0:
+  /hdr-histogram-js/2.0.1:
     dependencies:
+      '@assemblyscript/loader': 0.10.1
       base64-js: 1.5.1
       pako: 1.0.11
     dev: true
     resolution:
-      integrity: sha512-h0YToJ3ewqsaZ3nFTTa6dLOD7sqx+EgdC4+OcJ9Ou7zZDlT0sXSPHHr3cyenQsPqqbVHGn/oFY6zjfEKXGvzmQ==
-  /hdr-histogram-percentiles-obj/2.0.1:
-    dependencies:
-      hdr-histogram-js: 1.2.0
+      integrity: sha512-uPZxl1dAFnjUFHWLZmt93vUUvtHeaBay9nVNHu38SdOjMSF/4KqJUqa1Seuj08ptU1rEb6AHvB41X8n/zFZ74Q==
+  /hdr-histogram-percentiles-obj/3.0.0:
     dev: true
     resolution:
-      integrity: sha512-QBvbTxPlGwHj36IRF16XLoYEbUv5YEyO385kiS0IS3831fcSTNXTR785VtFFZ2ahY733z0ky8Jv4d6In+Ss+wQ==
+      integrity: sha512-7kIufnBqdsBGcSZLPJwqHT3yhk1QTsSlFsVD3kx5ixH/AlgBs9yM1q6DPhXZ8f8gtdqgh7N7/5btRLpQsS2gHw==
   /he/1.2.0:
     dev: true
     hasBin: true
@@ -3870,16 +3826,16 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
-  /piscina/1.6.3:
+  /piscina/2.1.0:
     dependencies:
       eventemitter-asyncresource: 1.0.0
-      hdr-histogram-js: 1.2.0
-      hdr-histogram-percentiles-obj: 2.0.1
+      hdr-histogram-js: 2.0.1
+      hdr-histogram-percentiles-obj: 3.0.0
     dev: true
     optionalDependencies:
       nice-napi: 1.0.2
     resolution:
-      integrity: sha512-I8aoBroMD6cRGYFsW1oN3X5YfJAyuT4pn+P2Tnk8ZYQ134ZqaQ0mjUztm9+NmKKawd0XlTY8wvz6bMxckrJX6g==
+      integrity: sha512-3FgX36QyZcU4prKuNKl7/lWlOF3HAv9n7JpCjw09Zbql2KkzXXQ7E5xUS+RV5wV24Rn0r6Lr8jLdtU/cNZHAnA==
   /pkg-dir/2.0.0:
     dependencies:
       find-up: 2.1.0
@@ -4931,10 +4887,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==
-  /workerpool/6.0.3:
+  /workerpool/6.1.0:
     dev: true
     resolution:
-      integrity: sha512-meU8ZzO+ipcx/njxtKUcbu2K95085q5WYDo8fR6PMW3hCY4driteIsNsEowYV7dzOtvq0HotUKsReJkK8gKXgg==
+      integrity: sha512-toV7q9rWNYha963Pl/qyeZ6wG+3nnsyvolaNUS8+R5Wtw6qJPTxIlOP1ZSvcGhEJw+l3HMMmtiNo9Gl61G4GVg==
   /wrap-ansi/6.2.0:
     dependencies:
       ansi-styles: 4.3.0
@@ -5021,7 +4977,7 @@ specifiers:
   '@babel/parser': ^7.12.7
   '@babel/traverse': ^7.12.9
   '@changesets/cli': ^2.14.1
-  '@ianwalter/bff': ^9.12.3
+  '@ianwalter/bff': ^10.0.5
   '@ianwalter/eslint-config': ^6.2.0
   '@ianwalter/renovate-config': ^1.4.3
   '@mdx-js/mdx': ^1.6.22
