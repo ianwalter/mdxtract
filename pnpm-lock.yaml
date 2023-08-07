@@ -1,6 +1,6 @@
 dependencies:
   '@babel/generator': 7.12.5
-  '@babel/parser': 7.12.7
+  '@babel/parser': 7.22.10
   '@babel/traverse': 7.12.9
   '@mdx-js/mdx': 1.6.22
   unist-util-visit: 2.0.3
@@ -143,6 +143,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-oWR02Ubp4xTLCAqPRiNIuMVgNO5Aif/xpXtabhzW2HWUD47XJsAB4Zd/Rg30+XeQA3juXigV7hlquOTmwqLiwg==
+  /@babel/parser/7.22.10:
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-lNbdGsQb9ekfsnjFGhEiF4hfFqGgfOP3H3d27re3n+CGhNuTSUEQdfWk556sTLNTloczcdM5TYF2LhzmDQKyvQ==
   /@babel/plugin-proposal-object-rest-spread/7.12.1_@babel+core@7.12.9:
     dependencies:
       '@babel/core': 7.12.9
@@ -5018,7 +5025,7 @@ packages:
       integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==
 specifiers:
   '@babel/generator': ^7.12.5
-  '@babel/parser': ^7.12.7
+  '@babel/parser': ^7.22.10
   '@babel/traverse': ^7.12.9
   '@changesets/cli': ^2.14.1
   '@ianwalter/bff': ^9.12.3
